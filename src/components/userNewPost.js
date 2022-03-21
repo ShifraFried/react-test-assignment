@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import { useParams } from 'react-router-dom';
-import {newPost} from "../api/userApi"
+import { newPost } from "../api/userApi"
 
-function UserNewPost(props) {
+const UserNewPost = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [canPost, setCanPost] = useState(true);
-
     let { id } = useParams();
 
     const createPost = () => {
-        newPost(id,title,body).then((data) => {
+        newPost(id, title, body).then((data) => {
             alert("the post create succefully :)")
-          })
+        })
             .catch(err => { })
-    }
+    }   
+
     return (
         <form>
             <h1>enter post details</h1>

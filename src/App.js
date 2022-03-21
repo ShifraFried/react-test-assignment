@@ -4,8 +4,7 @@ import UserDetails from './components/userDetails';
 import UserPosts from './components/userPosts';
 import UserNewPost from './components/userNewPost';
 
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Router>
